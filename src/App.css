@@ -1,0 +1,95 @@
+html,
+body,
+#root {
+  font: 0.9rem sans-serif;
+  color: white;
+  height: 100%;
+  margin: 0;
+}
+
+.search {
+  outline: none;
+  padding: 20px 7%;
+  border-radius: 20px;
+  border: none;
+  margin-bottom: 5%;
+  background: rgb(45, 34, 109);
+  width: 350px;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+::placeholder {
+  color: white;
+}
+
+.container {
+  background: linear-gradient(rgb(62, 118, 133), rgba(0, 0, 0, 0.418)),
+    url("https://hdwallpaper20.com/wp-content/uploads/2017/07/wallpaper-wp4001752.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px 8%;
+  border-radius: 20px;
+  width: 320px;
+  background: rgb(45, 34, 109);
+  box-shadow: 10px 10px 5px 0px rgba(15, 15, 15, 0.404);
+}
+
+.name {
+  font-size: 2em;
+}
+
+.boxes-1 {
+  display: flex;
+  justify-content: center;
+  gap: 250px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.temp {
+  font-size: 5rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+.data sup {
+  font-size: 0.5em;
+}
+
+.description {
+  font-size: 1.3rem;
+}
+
+.image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxes-2 {
+  display: flex;
+  justify-content: center;
+  gap: 40%;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
