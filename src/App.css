@@ -25,10 +25,7 @@ body,
 }
 
 .container {
-  background: linear-gradient(rgb(62, 118, 133), rgba(0, 0, 0, 0.418)),
-    url("https://hdwallpaper20.com/wp-content/uploads/2017/07/wallpaper-wp4001752.jpg");
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(rgb(62, 118, 133), rgba(0, 0, 0, 0.418));
   color: white;
   height: 100%;
   display: flex;
@@ -93,3 +90,47 @@ body,
   color: white;
   text-align: center;
 }
+
+@media (max-width: 1024px) {
+  .search {
+    width: 25%;
+  }
+
+  .container {
+    background: linear-gradient(rgb(62, 155, 180), rgba(65, 50, 50, 0.418));
+  }
+
+  .data{
+    width: 23%
+  }
+
+  .name {
+    font-size: 1.7em;
+  }
+
+  .boxes-1 {
+    gap: 100%;
+    font-weight: bold;
+  }
+
+  .temp {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+  
+  .data sup {
+    font-size: 0.4em;
+  }
+  
+  .description {
+    font-size: 1.0rem;
+  }
+  
+  .boxes-2 {
+    gap: 25%;
+    font-size: 1.1rem;
+  }
+}
+

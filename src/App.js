@@ -1,29 +1,19 @@
 import React, { useState } from 'react';
 import './App.css';
-import axios from 'axios';
 
-export const getWeatherData = async (query) => {
-  const { data } = await axios.get(process.env.REACT_APP_URL, {
-    params: {
-      q: query,
-      units: 'metric',
-      lang: 'mk',
-      appid: process.env.REACT_APP_API_KEY,
-    }
-  });
-  return data;
-}
-
-function App() {
+const App = () => {
   const [query, setQuery] = useState('');
   const [weather, setWeather] = useState({});
 
-  const searchCity = async (event) => {
-    if (event.key === 'Enter') {
-      const data = await getWeatherData(query);
-
-      setWeather(data);
-      setQuery('');
+  const search = evt => {
+    if (evt.key === "Enter") {
+      fetch(`${process.env.REACT_APP_URL}q=${query}&units=metric&lang=mk&appid=${process.env.REACT_APP_API_KEY}`)
+        .then(res => res.json())
+        .then(result => {
+          setWeather(result);
+          setQuery('');
+          console.log(result);
+        });
     }
   }
 
@@ -34,7 +24,7 @@ function App() {
         className="search"
         placeholder="Enter city"
         value={query} onChange={(event) => setQuery(event.target.value)}
-        onKeyPress={searchCity}
+        onKeyPress={search}
       />
       {weather.main && (
         <div className="data">
